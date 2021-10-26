@@ -1,7 +1,7 @@
 {
-  "name": "capacitor-zip",
-  "version": "0.0.1",
-  "description": "A simple file zip/unzip plugin.",
+  "name": "@derrickorama/capacitor-zip",
+  "version": "0.0.2",
+  "description": "A simple file zip/unzip plugin for Capacitor.",
   "main": "dist/plugin.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -14,7 +14,7 @@
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build"
   },
-  "author": "Zubie",
+  "author": "Derrick Gall",
   "license": "MIT",
   "devDependencies": {
     "@capacitor/android": "^2.4.7",
@@ -56,9 +56,11 @@
   "swiftlint": "@ionic/swiftlint-config",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zubiecar/capacitor-zip"
+    "url": "git+https://github.com/derrickorama/capacitor-zip.git"
   },
   "bugs": {
-    "url": "https://github.com/zubiecar/capacitor-zip/issues"
-  }
+    "url": "https://github.com/derrickorama/capacitor-zip/issues"
+  },
+  "homepage": "https://github.com/derrickorama/capacitor-zip#readme",
+  "dependencies": {}
 }
