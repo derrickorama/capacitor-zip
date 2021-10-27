@@ -1,4 +1,4 @@
-package com.zubie.capacitorzip;
+package com.derrickorama.capacitorzip;
 
 import android.util.Log;
 
