@@ -21,7 +21,7 @@ public class CapacitorZip extends Plugin {
     @PluginMethod
     public void unZip(PluginCall call) {
         String sourcePath = call.getString("sourcePath");
-        String sourceDirectory = call.getString("sourcePath");
+        String sourceDirectory = call.getString("sourceDirectory");
         String destinationPath = call.getString("destinationPath");
         String destinationDirectory = call.getString("destinationDirectory");
 
