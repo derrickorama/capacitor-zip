@@ -9,10 +9,11 @@ export class CapacitorZipWeb extends WebPlugin implements CapacitorZipPlugin {
     });
   }
 
-  async unZip(options: { source: string, destination: string }): Promise<{ path: string }> {
+  async unZip(options: { sourcePath: string, sourceDirectory: string, destinationPath: string, destinationDirectory: string }): Promise<{ path: string, directory: string }> {
     console.log('unZip', options);
     return {
-      path: options.destination,
+      path: options.destinationPath,
+      directory: options.destinationDirectory,
     };
   }
 }

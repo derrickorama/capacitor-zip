@@ -1,7 +1,5 @@
 package com.derrickorama.capacitorzip;
 
-import android.util.Log;
-
 import com.getcapacitor.JSObject;
 import com.getcapacitor.NativePlugin;
 import com.getcapacitor.Plugin;
@@ -22,20 +20,27 @@ public class CapacitorZip extends Plugin {
 
     @PluginMethod
     public void unZip(PluginCall call) {
-        String source = call.getString("source");
-        String destination = call.getString("destination");
+        String sourcePath = call.getString("sourcePath");
+        String sourceDirectory = call.getString("sourcePath");
+        String destinationPath = call.getString("destinationPath");
+        String destinationDirectory = call.getString("destinationDirectory");
+
+        File sourceFile = FilesystemUtils.getFileObject(getContext(), sourcePath, sourceDirectory);
+        File destinationFile = FilesystemUtils.getFileObject(getContext(), destinationPath, destinationDirectory);
+
         JSObject ret = new JSObject();
 
         try {
-            this.unPack(source, destination);
-            ret.put("path", destination);
+            this.unPack(sourceFile, destinationFile);
+            ret.put("path", destinationPath);
+            ret.put("directory", destinationDirectory);
             call.success(ret);
         } catch (IOException exception) {
             call.error(exception.getLocalizedMessage());
         }
     }
 
-    private void unPack(String source, String destination) throws IOException {
+    private void unPack(File source, File destination) throws IOException {
         InputStream inputStream = new FileInputStream(source);
         ZipInputStream zipInputStream = new ZipInputStream(new BufferedInputStream(inputStream));
         byte[] buffer = new byte[1024];
@@ -45,8 +50,6 @@ public class CapacitorZip extends Plugin {
             String filename = zipEntry.getName();
             String filePath = destination + "/" + filename;
 
-            // Need to create directories if not exists, or
-            // it will generate an Exception...
             if (zipEntry.isDirectory()) {
                 File fmd = new File(filePath);
                 fmd.mkdirs();

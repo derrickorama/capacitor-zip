@@ -7,5 +7,5 @@ declare module '@capacitor/core' {
 }
 
 export interface CapacitorZipPlugin {
-  unZip(options: { source: string, destination: string }): Promise<{ path: string }>;
+  unZip(options: { sourcePath: string, sourceDirectory: string, destinationPath: string, destinationDirectory: string }): Promise<{ path: string, directory: string }>;
 }
