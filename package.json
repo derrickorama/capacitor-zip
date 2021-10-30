@@ -1,6 +1,6 @@
 {
   "name": "@derrickorama/capacitor-zip",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A simple file zip/unzip plugin for Capacitor.",
   "main": "dist/plugin.js",
   "module": "dist/esm/index.js",
@@ -37,7 +37,7 @@
     "dist/",
     "ios/",
     "android/",
-    "CapacitorZip.podspec"
+    "DerrickoramaCapacitorZip.podspec"
   ],
   "keywords": [
     "capacitor",
