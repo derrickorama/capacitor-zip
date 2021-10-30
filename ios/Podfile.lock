@@ -2,10 +2,16 @@ PODS:
   - Capacitor (2.5.0):
     - CapacitorCordova
   - CapacitorCordova (2.5.0)
+  - ZIPFoundation (0.9.11)
 
 DEPENDENCIES:
   - "Capacitor (from `../node_modules/@capacitor/ios`)"
   - "CapacitorCordova (from `../node_modules/@capacitor/ios`)"
+  - ZIPFoundation (~> 0.9)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ZIPFoundation
 
 EXTERNAL SOURCES:
   Capacitor:
@@ -16,7 +22,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Capacitor: cf2174bec9bfe65f1c956616ac1d94afcef7d24d
   CapacitorCordova: 03d0a19b737e65c94825b20222c804d5467e1c5e
+  ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
-PODFILE CHECKSUM: e66d6fa04b0daaf06d8498d39637adf77139c716
+PODFILE CHECKSUM: bae365ae909ac50181c43dac0abced79f1c0f6ba
 
 COCOAPODS: 1.10.1
