@@ -16,7 +16,7 @@ Install with NPM:
 npm install @derrickorama/capacitor-zip
 ```
 
-Add the plugin to your MainActivity.java (example below):
+(Android) Add the plugin to your MainActivity.java:
 
 ```java
 package com.company.app;
